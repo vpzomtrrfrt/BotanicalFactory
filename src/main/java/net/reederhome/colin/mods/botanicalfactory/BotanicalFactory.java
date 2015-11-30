@@ -11,6 +11,8 @@ import vazkii.botania.api.recipe.RecipePetals;
 public class BotanicalFactory {
 	public static final String MODID = "botanicalfactory";
 	
+	public static LexiconEntry entryChopperhock;
+	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		registerSubTiles();
@@ -33,11 +35,11 @@ public class BotanicalFactory {
 					"redstoneRoot",
 					"elvenPixieDust"
 				);
-		LexiconEntry entry = new LexiconEntry("Chopperhock", BotaniaAPI.categoryFunctionalFlowers);
-		entry.addPage(BotaniaAPI.internalHandler.textPage("botanicalfactory.lexicon.chopperhock.1"));
-		entry.addPage(BotaniaAPI.internalHandler.petalRecipePage("botanicalfactory.lexicon.chopperhock.crafting", recipeChopperhock));
-		entry.setIcon(BotaniaAPI.internalHandler.getSubTileAsStack("chopperhock"));
-		entry.setKnowledgeType(BotaniaAPI.elvenKnowledge);
-		BotaniaAPI.addEntry(entry, BotaniaAPI.categoryFunctionalFlowers);
+		entryChopperhock = new FactoryLexiconEntry("flower.chopperhock", BotaniaAPI.categoryFunctionalFlowers);
+		entryChopperhock.addPage(BotaniaAPI.internalHandler.textPage("botanicalfactory.lexicon.flower.chopperhock.1"));
+		entryChopperhock.addPage(BotaniaAPI.internalHandler.petalRecipePage("botanicalfactory.lexicon.flower.chopperhock.crafting", recipeChopperhock));
+		entryChopperhock.setIcon(BotaniaAPI.internalHandler.getSubTileAsStack("chopperhock"));
+		entryChopperhock.setKnowledgeType(BotaniaAPI.elvenKnowledge);
+		BotaniaAPI.addEntry(entryChopperhock, BotaniaAPI.categoryFunctionalFlowers);
 	}
 }
