@@ -1,5 +1,0 @@
-tile.botania:flower.chopperhock.name=Chopperhock
-tile.botania:flower.chopperhock.reference=Chop, chop, chop
-botanicalfactory.lexicon.flower.chopperhock.1=The &1Chopperhock&0 is a flower that, given a small amount of &4Mana&0, will break nearby &4Wood&0 blocks, dropping them as items.  Applying a redstone signal will prevent it from working.
-botanicalfactory.lexicon.flower.chopperhock.crafting=Not a hopper
-botanicalfactory.lexicon.flower.chopperhock.tagline=Chops wood
