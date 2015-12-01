@@ -1,5 +1,10 @@
 tile.botania:flower.chopperhock.name=Chopperhock
 tile.botania:flower.chopperhock.reference=Chop, chop, chop
+tile.botania:flower.decayfeather.name=Decayfeather
+tile.botania:flower.decayfeather.reference=Please, no more rainbows
 botanicalfactory.lexicon.flower.chopperhock.1=The &1Chopperhock&0 is a flower that, given a small amount of &4Mana&0, will break nearby &4Wood&0 blocks, dropping them as items.  Applying a redstone signal will prevent it from working.
 botanicalfactory.lexicon.flower.chopperhock.crafting=Not a hopper
 botanicalfactory.lexicon.flower.chopperhock.tagline=Chops wood
+botanicalfactory.lexicon.flower.decayfeather.1=A big annoyance with chopping trees is waiting for the leaves to decay.  Thanks to the &1Decayfeather&0, you can reduce your time waiting for leaves by [insert percentage here] percent!  Note, however, that it uses mana even when the leaves are still attached to the tree without any effect.  You can disable it by applying a redstone signal.
+botanicalfactory.lexicon.flower.decayfeather.crafting=much flower
+botanicalfactory.lexicon.flower.decayfeather.tagline=Makes leaves decay faster
