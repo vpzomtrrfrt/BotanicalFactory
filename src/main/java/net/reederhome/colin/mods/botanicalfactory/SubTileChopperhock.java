@@ -40,8 +40,7 @@ public class SubTileChopperhock extends SubTileFunctional {
 						int meta = w.getBlockMetadata(cx, cy, cz);
 						if(b instanceof BlockLog) {
 							mana--;
-							w.setBlockToAir(cx, cy, cz);
-							b.dropBlockAsItem(w, cx, cy, cz, meta, 0);
+							w.func_147480_a(cx, cy, cz, true);
 							return;
 						}
 						cy++;
