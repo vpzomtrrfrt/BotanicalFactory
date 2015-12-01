@@ -1,0 +1,18 @@
+language: java
+jdk:
+- oraclejdk7
+- openjdk6
+before_deploy:
+  - gradle build
+  - export THE_JAR=$(ls build/libs/botanicalfactory*.jar)
+  - echo "found $THE_JAR for deploying"
+deploy:
+  provider: releases
+  api_key:
+    secure: ft0SLV5kmtSNUoSDoBPvnGs7rPwNed7MF6m2VBv4BTSapORwFmzz7eDUojUcBUGPmweNfSmL8BqNeBw2ZOujdyRKB3ZqdII8HWxbSEcLgc5uewUzcouIT89zi3zs20ayuRfwDt/eRsqHVv6GLEKmsdvXxPNxCzPQa9qnySRZdYZVFNCNS/H8g4HtPgPD258PGHPaME2OicxsdJ/kAbZlpAVNbbsr05LMbPMua/+mk3mTahmEY29xFQvO8pU9ZcGKHMlpkw1UHgjnJI9yQkJGg9c8oPI4RbNHnu8PHz1kkGFt8pPG420s0RSzouan32YbcxobtYU4ZPMC/t2KlOa7fTkmppYnbIjyV6nguXz5iahD3dJG6Cm7j89V+lgyvssRALDUBHd1YTweKxO6llRYiDoGWhCRZ0r0R0+dqKvhHJ5Do0ivAWCHm2/H4e/TYb6uZ9vAtOVuBMptiVbk/zy5lLMi2HYXzuyYcPyBiO5B8iraJ0kM/xtubRJTapbM/6liNay2yurISgGeB6wvMAMBXtVrwFkzx1LYs/ldMBsNcPUe+3CAlQfWkBrh0/5nj0sCxVjZuo2anlzfqLEVZHq9HssZ7jLe/ot9IlTJxf7oCSzPuQBuRDoJ1ajTfMiw3fur5EOZE867TARWRBPfQ1bG5jqDNPXPJt2xGxMXbQTKZ48=
+  file: "${THE_JAR}"
+  on:
+    repo: vpzomtrrfrt/BotanicalFactory
+    all_branches: true
+    tags: true
+  prerelease: true
