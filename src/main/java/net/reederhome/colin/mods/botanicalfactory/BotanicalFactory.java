@@ -30,19 +30,21 @@ public class BotanicalFactory {
 	public void setupCraftingAndLexiconEntries() {
 		RecipePetals recipeChopperhock = BotaniaAPI.registerPetalRecipe(BotaniaAPI.internalHandler.getSubTileAsStack("chopperhock"),
 					"petalLime",
+					"petalLime",
 					"petalGreen",
 					"petalWhite",
-					"manaPetalLime",
-					"manaPetalBrown",
+					"petalBrown",
+					"powderMana",
 					"runeSpringB",
 					"redstoneRoot",
 					"elvenPixieDust"
 				);
 		RecipePetals recipeDecayfeather = BotaniaAPI.registerPetalRecipe(BotaniaAPI.internalHandler.getSubTileAsStack("decayfeather"),
-					"manaPetalPurple",
+					"petalPurple",
 					"petalGreen",
-					"manaPetalGreen",
+					"petalGreen",
 					"petalBrown",
+					"powderMana",
 					"runeAutumnB",
 					"redstoneRoot",
 					"elvenPixieDust"

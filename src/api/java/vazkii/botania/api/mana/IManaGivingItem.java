@@ -6,19 +6,15 @@
  * Botania is Open Source and distributed under the
  * Botania License: http://botaniamod.net/license.php
  * 
- * File Created @ [15/11/2015, 19:27:07 (GMT)]
+ * File Created @ [08/12/2015, 18:10:29 (GMT)]
  */
 package vazkii.botania.api.mana;
 
 /**
- * Any TileEntity that implements this is defined as having a direction,
- * and has two rotations (X and Y).
- * An example of this is the Mana Spreader.
+ * An item that implements this is an item that can give mana to other items.
+ * This is used in botania for the terra shatterer to not be constantly
+ * receiving mana from these items..
  */
-public interface IDirectioned {
-
-	public float getRotationX();
-
-	public float getRotationY();
+public interface IManaGivingItem {
 
 }
