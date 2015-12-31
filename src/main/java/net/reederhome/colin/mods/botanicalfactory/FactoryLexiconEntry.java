@@ -10,8 +10,12 @@ public class FactoryLexiconEntry extends LexiconEntry implements IAddonEntry {
 	private String tinyName;
 	
 	public FactoryLexiconEntry(String name, LexiconCategory category) {
-		super("tile.botania:"+name+".name", category);
-		tinyName = name;
+		this("tile.botania:"+name+".name", name, category);
+	}
+
+	public FactoryLexiconEntry(String name, String tinyName, LexiconCategory category) {
+		super(name, category);
+		this.tinyName = tinyName;
 		BotaniaAPI.addEntry(this, category);
 	}
 	
