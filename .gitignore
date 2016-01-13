@@ -4,3 +4,6 @@
 .gradle
 eclipse
 out
+.classpath
+.project
+.settings
