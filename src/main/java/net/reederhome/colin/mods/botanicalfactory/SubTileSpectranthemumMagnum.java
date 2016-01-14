@@ -9,6 +9,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.MathHelper;
+import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.subtile.SubTileFunctional;
 
 import java.util.Iterator;
@@ -116,5 +117,10 @@ public class SubTileSpectranthemumMagnum extends SubTileFunctional {
 
     private double distTo(int x, int y, int z) {
         return Math.sqrt(Math.pow(x - supertile.xCoord, 2) + Math.pow(y - supertile.yCoord, 2) + Math.pow(z - supertile.zCoord, 2));
+    }
+
+    @Override
+    public LexiconEntry getEntry() {
+        return BotanicalFactory.entrySpectranthemumMagnum;
     }
 }
