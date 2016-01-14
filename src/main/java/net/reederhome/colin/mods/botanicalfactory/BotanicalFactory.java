@@ -10,6 +10,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.oredict.ShapedOreRecipe;
+import net.minecraftforge.oredict.ShapelessOreRecipe;
 import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.recipe.RecipePetals;
@@ -21,6 +22,7 @@ public class BotanicalFactory {
 	public static LexiconEntry entryChopperhock;
 	public static LexiconEntry entryFloatus;
 	public static LexiconEntry entryOpenChest;
+	public static LexiconEntry entrySpectranthemumMagnum;
 
 	public static Block openChest;
 
@@ -42,6 +44,8 @@ public class BotanicalFactory {
 		addSubTileToTab("chopperhock");
 		BotaniaAPI.registerSubTile("floatus", SubTileFloatus.class);
 		addSubTileToTab("floatus");
+		BotaniaAPI.registerSubTile("spectranthemumMagnum", SubTileSpectranthemumMagnum.class);
+		addSubTileToTab("spectranthemumMagnum");
 	}
 	
 	public void setupCraftingAndLexiconEntries() {
@@ -72,6 +76,12 @@ public class BotanicalFactory {
 				'c', "chestWood",
 				'd', Blocks.dropper);
 		GameRegistry.addRecipe(recipeOpenChest);
+		IRecipe recipeSpectranthemumMagnum = new ShapelessOreRecipe(
+				BotaniaAPI.internalHandler.getSubTileAsStack("spectranthemumMagnum"),
+				BotaniaAPI.internalHandler.getSubTileAsStack("spectranthemum"),
+				"elvenDragonstone"
+		);
+		GameRegistry.addRecipe(recipeSpectranthemumMagnum);
 
 		entryChopperhock = new FactoryLexiconEntry("flower.chopperhock", BotaniaAPI.categoryFunctionalFlowers);
 		entryChopperhock.addPage(BotaniaAPI.internalHandler.textPage("botanicalfactory.lexicon.flower.chopperhock.1"));
@@ -90,6 +100,12 @@ public class BotanicalFactory {
 		entryOpenChest.addPage(BotaniaAPI.internalHandler.craftingRecipePage("botanicalfactory.lexicon.tile.openChest.crafting", recipeOpenChest));
 		entryOpenChest.setIcon(new ItemStack(openChest));
 		entryOpenChest.setKnowledgeType(BotaniaAPI.basicKnowledge);
+
+		entrySpectranthemumMagnum = new FactoryLexiconEntry("flower.spectranthemumMagnum", BotaniaAPI.categoryFunctionalFlowers);
+		entrySpectranthemumMagnum.addPage(BotaniaAPI.internalHandler.textPage("botanicalfactory.lexicon.flower.spectranthemumMagnum.1"));
+		entrySpectranthemumMagnum.addPage(BotaniaAPI.internalHandler.craftingRecipePage("botanicalfactory.lexicon.flower.spectranthemumMagnum.crafting", recipeSpectranthemumMagnum));
+		entrySpectranthemumMagnum.setIcon(BotaniaAPI.internalHandler.getSubTileAsStack("spectranthemumMagnum"));
+		entrySpectranthemumMagnum.setKnowledgeType(BotaniaAPI.elvenKnowledge);
 	}
 
 	public void setupBlocksAndItems() {
